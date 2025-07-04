@@ -23,7 +23,7 @@ dependencies:
   collection:
   flutter:
     sdk: flutter
-  intl: '>=0.15.2 <0.19.0'
+  intl: '>=0.15.2'
   logging:
   meta:
 
