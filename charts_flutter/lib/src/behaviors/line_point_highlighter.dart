@@ -13,7 +13,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import 'package:collection/collection.dart' show ListEquality;
 import 'package:charts_common/common.dart' as common
     show
         ChartBehavior,
@@ -21,7 +20,7 @@ import 'package:charts_common/common.dart' as common
         LinePointHighlighterFollowLineType,
         SelectionModelType,
         SymbolRenderer;
-import 'package:flutter/widgets.dart' show hashValues;
+import 'package:collection/collection.dart' show ListEquality;
 import 'package:meta/meta.dart' show immutable;
 
 import 'chart_behavior.dart' show ChartBehavior, GestureType;
@@ -115,7 +114,7 @@ class LinePointHighlighter<D> extends ChartBehavior<D> {
 
   @override
   int get hashCode {
-    return hashValues(
+    return Object.hash(
       selectionModelType,
       defaultRadiusPx,
       radiusPaddingPx,
